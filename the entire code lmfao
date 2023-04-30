@@ -1,0 +1,44 @@
+from flask import Flash, render_templ, request
+
+from sqla import DB
+
+import sqlite3
+
+app = Flask(name)
+
+db = sqlite3.connect("chat-data.db")
+
+app.secret_key = b'secret_key100'
+
+db.create_all()
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Chat-Data.db'
+
+app.config['SQLALCHEMY_DEBUG'] = False
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+app.config['SQLALCHEMY_ECHO'] = True
+
+app.config['SQLALCHEMY_DEBUG'] = False
+
+
+app.config['SQLALCHEMY_TRACK_MODIFICations'] = True
+
+
+app.config['SQLALCHEMY_ECHO'] = True
+
+
+app.config['SQLALCHEMY_EXECUTE'] = True
+
+
+app.config['SQLALCHEMY_AUTO_COMMIT'] = False
+
+app.config['SECRET_KEY'] = "secret_key100"
+
+app.config['SQLALCHEMY_USER'] = "admin"
+
+app.config['SQLALCHEMY_PASSWORD'] = "a1234" # Please change password after
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///Chat-Data.db"
+
